@@ -85,25 +85,32 @@ body {
   background: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  padding: 1rem 1.5rem;
+  padding: 0.4rem 2rem 0.75rem 2.15rem;
   margin: 0;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: transform 75ms, box-shadow 75ms;
+  transition: transform 100ms, box-shadow 100ms;
   user-select: none;
 }
 .stories li::before {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: 0.75rem;
+  left: 0.75rem;
   display: block;
   content: "";
-  width: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+}
+.stories li:hover {
+  background-color: #fafafa;
 }
 .stories li.unread {
   background-color: #f8f5fd;
+}
+.stories li.unread:hover {
+  background-color: #f4f0fc;
 }
 .stories li.unread::before {
   background-color: rgb(123, 22, 255);
@@ -112,16 +119,9 @@ body {
   box-shadow: 0 1px 2px rgba(0,0,0,.25);
   transform: scale(0.995);
 }
-.stories li.reading::before {
-  background-color: currentColor;
-}
-.stories li:hover:not(.reading) {
-  box-shadow: 0 4px 8px rgba(0,0,0,.25);
-  transform: scale(1.005);
-}
 .stories li:active {
-  box-shadow: 0 0.5px 2px rgba(0,0,0,.25) !important;
-  transform: scale(0.9925) !important;
+  box-shadow: 0 0.5px 1.5px rgba(0,0,0,.25) !important;
+  transform: scale(0.9915) !important;
   transition: transform 10ms, box-shadow 10ms;
 }
 .stories .title {
