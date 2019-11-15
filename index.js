@@ -103,8 +103,8 @@ const StoryList = props =>
 
 const Filter = props =>
     h('div', { class: {
-      filter: true,
-      editing: props.editingFilter
+      'nice-input': true,
+      editing: props.editingFilter,
     } }, [
 
         h('input', {
@@ -114,7 +114,10 @@ const Filter = props =>
             onClick: StartEditingFilter,
         }),
 
-        h('button', { onClick: props.editingFilter ? StopEditingFilter : StartEditingFilter }, 'Go')
+        h('button', {
+            onClick: props.editingFilter ? StopEditingFilter : StartEditingFilter,
+            class: 'square-button'
+        }, 'Go')
     ])
 
 const StoryDetail = props =>
