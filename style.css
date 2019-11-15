@@ -1,7 +1,5 @@
 @import 'hyperapp.css';
 
-
-
 .container {
   width: 90%;
   max-width: 1024px;
@@ -11,8 +9,18 @@
   grid-gap: 2rem;
 }
 
-
-
+.square-button {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.square-button:active {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+}
+.square-button::before,
+.square-button::after {
+  content: none;
+}
 
 .stories {
   grid-column: 1;
@@ -24,6 +32,10 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+}
+.stories ul li.reading,
+.stories ul li.reading b {
+  color: var(--primary-blue);
 }
 
 
